@@ -3,3 +3,6 @@
     <li><%= artwork.name %></li>
   <% end %>
 </ul>
+
+ <%= link_to "Add an artwork", new_artwork_path %>
+ <%= link_to "Show artworks", artwork_path(artwork) %>
