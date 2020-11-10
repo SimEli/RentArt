@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+#hero {
+  width: 100vw;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .title {
+    display: flex;
+    padding-left: 80px;
+    padding-top: 270px;
+    h2 {
+      color: white;
+      font-weight: bold;
+      font-size: 70px;
+    }
+
+    .art {
+      padding-left: 15px;
+    }
+    h6 {
+      color: white;
+      padding-left: 15px;
+      padding-top: 50px;
+    }
+  }
+
+}
