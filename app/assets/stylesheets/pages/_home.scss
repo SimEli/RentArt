@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   .title {
-    display: flex;
     padding-left: 100px;
     padding-top: 270px;
     h2 {
@@ -17,8 +16,39 @@
   }
 }
 
+  .buttons {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    #listnow {
+      margin-left: 20px;
+      color: white;
+      background-color: #121449;
+      padding: 8px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    #rentnow {
+      background-color: #121449;
+      color: white;
+      padding: 8px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    #rentnow:hover {
+      background-color: #F88CA5;
+      transition-duration: 0.4s;
+      text-decoration: none;
+    }
+    #listnow:hover {
+      background-color: #F88CA5;
+      transition-duration: 0.4s;
+      text-decoration: none;
+    }
+  }
+
 .card {
-  width: 75%;
+  width: 80%;
   // position: relative;
   background-color: #EBEBEB;
   margin: 0 auto;
@@ -28,9 +58,6 @@
       padding-top: 40px;
       padding-left: 20px;
       padding-right: 20px;
-    }
-    .logo{
-
     }
   }
 }
