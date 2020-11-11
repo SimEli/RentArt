@@ -2,5 +2,12 @@
 <p><%= @artwork.description %></p>
 <p><%= @artwork.category %></p>
 
- <%= link_to "Book", new_booking_path %>
+
+<h4>Artwork bookings</h4>
+<ol>
+  <% @artwork.bookings.each do |booking| %>
+    <li> <%= booking.start %> <%= booking.end %></li>
+  <% end %>
+</ol>
+ <%= link_to "Book", new_artwork_booking_path(@artwork) %>
  <%= link_to "Back to artworks", artworks_path %>

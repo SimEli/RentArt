@@ -1,3 +1,3 @@
 class Artwork < ApplicationRecord
-   belongs_to :booking
+   has_many :bookings
 end

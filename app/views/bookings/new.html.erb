@@ -1,0 +1,14 @@
+<h1>booking form</h1>
+<%= simple_form_for([@artwork,@booking]) do |f| %>
+  <%= f.input :start, as: :date, html5: true %>
+  <%= f.input :end, as: :date, html5: true %>
+  <%= f.submit %>
+<% end %>
+
+
+<h4>Already booked dates</h4>
+<ol>
+  <% @artwork.bookings.each do |booking| %>
+    <li> <%= booking.start %> <%= booking.end %></li>
+  <% end %>
+</ol>
