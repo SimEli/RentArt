@@ -3,14 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-
-  get '/artworks', to: 'artworks#index', as: :artworks
-  get  'artworks/new', to: 'artworks#new', as: :new_artwork
-  post '/artworks', to: 'artworks#create'
-  get '/artworks/:id', to: 'artworks#show', as: :artwork
+    resources :artworks, only: [:index, :new, :show, :create] do
+    resources :bookings, only: [:create, :new]
 
 
-
-  get '/artworks', to: 'artworks#index'
-
+end
 end
