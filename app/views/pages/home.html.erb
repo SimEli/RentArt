@@ -4,7 +4,12 @@
 <banner>
  <!--  <img src="<%= image_path('jpeg.jpg') %>" id="hero"> -->
  <div id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('jpeg.jpg') %>')">
-   <div class="title"><h2>Welcome to Rent Art</h2></div>
+    <div class="title"><h2>Welcome to RentArt</h2>
+    <div class="buttons">
+      <div id="rentnow"><%= link_to "Rent now", artworks_path %></div>
+      <div id="listnow"><%= link_to "List your Art", new_artwork_path %></div>
+    </div>
+  </div>
  </div>
 </banner>
 
@@ -16,6 +21,3 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Et velit, similique cupiditate in cumque recusandae vero inventore corrupti laboriosam veritatis, tempora commodi at laudantium nemo eveniet consectetur, voluptas dolores suscipit!</p>
   </div>
 </div>
-
-<%= link_to "Rent now", artworks_path %>
-<%= link_to "List now", new_artwork_path %>
