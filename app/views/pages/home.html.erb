@@ -1,4 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- <h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p> -->
+
+<banner>
+ <!--  <img src="<%= image_path('jpeg.jpg') %>" id="hero"> -->
+ <div id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('jpeg.jpg') %>')">
+   <div class="title"><h2>Welcome to Rent Art</h2></div>
+ </div>
+</banner>
+
+<div class="card">
+  <div class="about_us">
+    <div class="logo"><%= image_tag("logo.png", alt: "rss feed", height: 600, width: 600)%></div>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, minima quia odit recusandae ea. Omnis, deserunt, inventore debitis qui harum, mollitia voluptatum nulla magnam non, quidem molestias similique. Quia, id.
+    Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Nobis, aperiam explicabo provident reprehenderit dolores? Tenetur, beatae, architecto. Quidem voluptatum inventore quia odit itaque amet, magni assumenda deserunt! Veniam, repellendus nostrum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et velit, similique cupiditate in cumque recusandae vero inventore corrupti laboriosam veritatis, tempora commodi at laudantium nemo eveniet consectetur, voluptas dolores suscipit!</p>
+  </div>
+</div>
 
 <%= link_to "Show artworks", artworks_path %>
