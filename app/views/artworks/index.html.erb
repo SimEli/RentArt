@@ -4,7 +4,7 @@
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
         <h2><%= link_to artwork.name, artwork %></h2>
           <p><%= link_to artwork.description, artwork %></p>
-          <h4 class="card-trip-pricing">£99.99</h4>
+          <h4 class="card-trip-pricing"><%= artwork.price %></h4>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
     <% end %>
