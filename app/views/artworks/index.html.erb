@@ -1,6 +1,7 @@
 <ul>
   <% @artworks.each do |artwork| %>
-    <li><%= link_to artwork.name, artwork %></li>
+    <li>
+      <%= link_to artwork.name, artwork %>
+    </li>
   <% end %>
 </ul>
-
