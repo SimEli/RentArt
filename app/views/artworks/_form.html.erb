@@ -1,4 +1,4 @@
-<%= form_for(artwork) do |f| %>
+<%= simple_form_for(artwork) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :artist %>
@@ -13,6 +13,7 @@
   <%= f.text_field :city %>
   <%= f.label :category %>
   <%= f.text_field :category %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
 

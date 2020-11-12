@@ -6,9 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # artworks = Artwork.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-
 puts "Creating artworks..."
-madonne = { name: "Madonne", description: "The madonne, virgin with her child", category: "painting" }
+Artwork.destroy_all
+madonne = {
+  name: "Madonne",
+  description: "The madonne, virgin with her child",
+  category: "painting"
+}
 the_thinker =  { name: "The Thinker of Rodin", description: "Beautiful masterpiece", category: "statue" }
 man_ray = { name: "Man Ray", description: "Sculpture herma, polished pewter on wooden base", category: "sculpture" }
 pomodoro = { name: "Arnaldo Pomodoro. Sogno 8", description: "Etching and aquatint with embossing and collage, put on collage and framed, 193x94cm", category: "painting" }
