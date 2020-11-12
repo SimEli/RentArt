@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # artworks = Artwork.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 
-# require "open-uri"
+require "open-uri"
 
 puts "Creating artworks..."
 Artwork.destroy_all
@@ -22,6 +22,10 @@ madonne = {
   category: "painting",
   price: "€250",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198442/artworks/madonne-benua_da-vinci_fr5lku.jpg')
+artwork = Artwork.new(madonne)
+artwork.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+artwork.save
 
 the_thinker =  {
   artist: "Auguste Rodin",
@@ -33,6 +37,10 @@ the_thinker =  {
   category: "sculpture",
   price:  "€200",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198445/artworks/Rodin_e1bc4z.png')
+artwork = Artwork.new(the_thinker)
+artwork.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+artwork.save
 
 man_ray = {
   artist: "Man Ray",
@@ -44,6 +52,10 @@ man_ray = {
   category: "sculpture",
   price:  "€100",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198443/artworks/man_ray_gfwpam.jpg')
+artwork = Artwork.new(man_ray)
+artwork.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+artwork.save
 
 pomodoro = {
   artist: "Arnaldo Pomodoro",
@@ -55,6 +67,10 @@ pomodoro = {
   category: "painting",
   price:  "€250",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198444/artworks/pomodoro_ftnm99.jpg')
+artwork = Artwork.new(pomodoro)
+artwork.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+artwork.save
 
 brusselmans = {
   artist: "Jean Brusselmans",
@@ -66,6 +82,10 @@ brusselmans = {
   category: "painting",
   price: "€120",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198443/artworks/brusselmans_uzybyr.jpg')
+artwork = Artwork.new(brusselmans)
+artwork.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+artwork.save
 
 guiette = {
   artist: "Rene Guiette",
@@ -77,6 +97,10 @@ guiette = {
   category: "painting",
   price: "€100",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198443/artworks/guiette_vnflez.jpg')
+artwork = Artwork.new(guiette)
+artwork.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+artwork.save
 
 dali = {
   artist: "Salvador Dali",
@@ -88,6 +112,10 @@ dali = {
   category: "sculpture",
   price: "€300",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198443/artworks/salvador-dal%C3%AD-candlesticks_phbxme.jpg')
+artwork = Artwork.new(dali)
+artwork.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+artwork.save
 
 boetti = {
   artist: "Alighiero Boetti",
@@ -99,6 +127,10 @@ boetti = {
   category: "painting",
   price: "€95",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198444/artworks/Alighiero_boetti_tgurt7.png')
+artwork = Artwork.new(boetti)
+artwork.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+artwork.save
 
 ting = {
   artist: "Walasse Ting",
@@ -110,6 +142,11 @@ ting = {
   category: "painting",
   price: "€90",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198443/artworks/Walasse_Ting_tlo7sx.png')
+artwork = Artwork.new(ting)
+artwork.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+artwork.save
+
 pol_mara = {
   artist: "Pol Mara",
   name: "Objekteum",
@@ -120,11 +157,17 @@ pol_mara = {
   category: "painting",
   price: "€80",
 }
+file = URI.open('https://res.cloudinary.com/de6iqiwqr/image/upload/v1605198442/artworks/Screenshot_2020-11-12_at_14.27.50_sbtouv.png')
+artwork = Artwork.new(pol_mara)
+artwork.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+artwork.save
 
 [ madonne, the_thinker, man_ray, pomodoro, brusselmans, guiette, dali, boetti, ting, pol_mara ].each do |attributes|
   artwork = Artwork.create!(attributes)
   puts "Created #{artwork.name}"
 end
+
+
 puts "Finished!"
 
 
