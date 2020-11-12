@@ -1,7 +1,7 @@
 <h2><%= @artwork.name %></h2>
 <p><%= @artwork.description %></p>
 <p><%= @artwork.category %></p>
-
+<%= cl_image_tag @artwork.photo.key, height: 300, width: 400, crop: :fill if @artwork.photo.attached?%>
 
 <h4>Artwork bookings</h4>
 <ol>
@@ -9,5 +9,6 @@
     <li> <%= booking.start %> <%= booking.end %></li>
   <% end %>
 </ol>
- <%= link_to "Book", new_artwork_booking_path(@artwork) %>
- <%= link_to "Back to artworks", artworks_path %>
+<%= link_to "Book", new_artwork_booking_path(@artwork) %>
+<%= link_to "Back to artworks", artworks_path %>
+<%= link_to "Edit", edit_artwork_path %>
