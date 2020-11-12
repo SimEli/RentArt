@@ -3,7 +3,7 @@
     <% @artworks.each do |artwork| %>
       <%= link_to artwork_path(artwork) do %>
         <div class="card-artwork">
-          <%= cl_image_tag @artwork.photo.key, height: 400, width: 300, crop: :fill if @artwork.photo.attached?%>
+          <%= cl_image_tag artwork.photo.key, height: 400, width: 300, crop: :fill if artwork.photo.attached?%>
           <div class="card-artwork-infos">
             <div>
               <h2><%= artwork.artist %></h2>
