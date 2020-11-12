@@ -17,41 +17,111 @@ madonne = {
   name: "Madonne",
   description: "The madonne, virgin with her child",
   date: 1501,
+  size: "100cm x 100cm",
   city: "St-Petersburg",
-  category: "painting"
+  category: "painting",
+  price: "€250",
 }
 
 the_thinker =  {
-  name: "The Thinker of Rodin",
-  description: "Beautiful masterpiece",
-  category: "statue"
+  artist: "Auguste Rodin",
+  name: "The Thinker",
+  description: "Bronze Sculpture Le Grand Penseur",
+  date: 1998,
+  size: "36cm x 19cm x 30cm",
+  city: "Paris",
+  category: "sculpture",
+  price:  "€200",
 }
 
 man_ray = {
-  name: "Man Ray",
-  description: "Sculpture herma, polished pewter on wooden base",
-  category: "sculpture"
+  artist: "Man Ray",
+  name: "Herma",
+  description: "Sculpture polished pewter on wooden base",
+  date: 1975,
+  size: "19cm x 30cm x 24cm",
+  city: "London",
+  category: "sculpture",
+  price:  "€100",
 }
 
 pomodoro = {
-  name: "Arnaldo Pomodoro. Sogno 8",
-  description: "Etching and aquatint with embossing and collage, put on collage and framed, 193x94cm",
-  category: "painting"
+  artist: "Arnaldo Pomodoro",
+  name: "Sogno 8",
+  description: "Etching and aquatint with embossing and collage, put on collage and framed",
+  date: 1994,
+  size: "193cm x 94cm",
+  city: "Rome",
+  category: "painting",
+  price:  "€250",
 }
 
 brusselmans = {
-  name: "Jean Brusselmans. Le Jardin de la maison de Jean",
-  description: "Original work, oil on cardboard, 40x50cm",
-  category: "painting"
+  artist: "Jean Brusselmans",
+  name: "Le Jardin de la maison de Jean",
+  description: "Original work, oil on cardboard",
+  date: 1950,
+  size: "40cm x 50cm",
+  city: "Brussels",
+  category: "painting",
+  price: "€120",
 }
 
 guiette = {
-  name: "Rene Guiette",
-  description: "Original work on paper, 73x44cm",
-  category: "oil & mixed media"
+  artist: "Rene Guiette",
+  name: "La Rascasse",
+  description: "Original work on paper, oil & mixed media",
+  date: 1949,
+  size: "73cm x 92cm",
+  city: "Amsterdam",
+  category: "painting",
+  price: "€100",
 }
 
-[ madonne, the_thinker, man_ray, pomodoro, brusselmans, guiette ].each do |attributes|
+dali = {
+  artist: "Salvador Dali",
+  name: "Candlesticks, Castor & Pollux",
+  description: "Castor & Pollux (pair)",
+  date: 1975,
+  size: "26,5 cm",
+  city: "Madrid",
+  category: "sculpture",
+  price: "€300",
+}
+
+boetti = {
+  artist: "Alighiero Boetti",
+  name: "Tutto",
+  description: "Original work on paper",
+  date: 1988,
+  size: "97cm x 134cm",
+  city: "Florence",
+  category: "painting",
+  price: "€95",
+}
+
+ting = {
+  artist: "Walasse Ting",
+  name: "Seven Geishas",
+  description: "Acrylic on Canvas",
+  date: 1980,
+  size: "35.6cm x 47cm",
+  city: "Beijing",
+  category: "painting",
+  price: "€90",
+}
+pol_mara = {
+  artist: "Pol Mara",
+  name: "Objekteum",
+  description: "Oil on Canvas",
+  date: 1970,
+  size: "145.5cm × 145.5cm",
+  city: "New York",
+  category: "painting",
+  price: "€80",
+}
+
+[ madonne, the_thinker, man_ray, pomodoro, brusselmans, guiette, dali, boetti, ting, pol_mara ].each do |attributes|
   artwork = Artwork.create!(attributes)
   puts "Created #{artwork.name}"
 end
