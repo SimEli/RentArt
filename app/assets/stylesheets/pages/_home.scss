@@ -20,6 +20,10 @@
     display: flex;
     color: white;
     text-decoration: none;
+    a {
+      text-decoration: none;
+      color: white;
+    }
     #listnow {
       margin-left: 20px;
       color: white;
@@ -47,17 +51,16 @@
     }
   }
 
-.card {
+.about_us_card {
   width: 80%;
   // position: relative;
   background-color: #EBEBEB;
-  margin: 0 auto;
+  margin: 30px auto;
   .about_us {
     display: flex;
+    // justify-content: space-around;
     #text {
-      padding-top: 40px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 30px;
     }
   }
 }
