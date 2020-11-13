@@ -104,7 +104,7 @@ artwork.save
 
 dali = {
   artist: "Salvador Dali",
-  name: "Candlesticks, Castor & Pollux",
+  name: "Candlesticks",
   description: "Castor & Pollux (pair)",
   date: 1975,
   size: "26,5 cm",
@@ -162,10 +162,12 @@ artwork = Artwork.new(pol_mara)
 artwork.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 artwork.save
 
-[ madonne, the_thinker, man_ray, pomodoro, brusselmans, guiette, dali, boetti, ting, pol_mara ].each do |attributes|
-  artwork = Artwork.create!(attributes)
-  puts "Created #{artwork.name}"
-end
+# THIS FUNCTION BELOW WAS SEEDING THE 10 CARDS WITHOUT IMAGES, CREATING DOUBLONS
+
+# [ madonne, the_thinker, man_ray, pomodoro, brusselmans, guiette, dali, boetti, ting, pol_mara ].each do |attributes|
+#   artwork = Artwork.create!(attributes)
+#   puts "Created #{artwork.name}"
+# end
 
 
 puts "Finished!"

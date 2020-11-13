@@ -1,7 +1,10 @@
 <div class="container">
+  <div class="title">
+    <h1>Artworks to rent</h1>
+  </div>
   <div class="cards">
     <% @artworks.each do |artwork| %>
-      <%= link_to artwork_path(artwork) do %>
+      <%= link_to artwork_path(artwork),class: "links" do %>
         <div class="card-artwork">
           <%= cl_image_tag artwork.photo.key, height: 400, width: 300, crop: :fill if artwork.photo.attached?%>
           <div class="card-artwork-infos">
@@ -9,7 +12,10 @@
               <h2><%= artwork.artist %></h2>
               <p><%= artwork.name %></p>
             </div>
-            <h2 class="card-artwork-pricing"><%= artwork.price %></h2>
+            <h2 class="card-artwork-pricing">
+              <%= artwork.price %>
+              <p>/day</p>
+            </h2>
           </div>
         </div>
       <% end %>

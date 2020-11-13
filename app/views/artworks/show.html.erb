@@ -19,19 +19,19 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-  <h4>Artwork bookings</h4>
+  <h4 id='bookings'>Artwork bookings</h4>
   <ol>
     <% @artwork.bookings.each do |booking| %>
       <li> <%= booking.start %> <%= booking.end %></li>
     <% end %>
   </ol>
-  <%= link_to "Book", new_artwork_booking_path(@artwork) %>
-  <%= link_to "Back to artworks", artworks_path %>
-  <%= link_to "Edit", edit_artwork_path %>
+  <%# <%= link_to "Book", new_artwork_booking_path(@artwork), class: 'buttons' %>
+  <%# <%= link_to "Back to artworks", artworks_path %>
+  <%# <%= link_to "Edit", edit_artwork_path %>
+  <div class="buttons">
+      <div id="booknow"><%= link_to "Book", new_artwork_booking_path(@artwork) %></div>
+      <div id="backindex"><%= link_to "Back to artworks", artworks_path %></div>
+      <div id="editbtn"><%= link_to "Edit", edit_artwork_path %></div>
+  </div>
 </div>
 
-
-<div id="map"
-     style="width: 50%; height: 400px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>

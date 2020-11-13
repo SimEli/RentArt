@@ -4,10 +4,9 @@
       <div class="booking-title">
           <h1>Booking form</h1>
       </div>
-      <div class="image_of_this_artwork">
-        <p>we can add here the image
-        </p>
-      </div>
+      <div id="image">
+      <%= cl_image_tag @artwork.photo.key, height: 400, width: 300, crop: :fill if @artwork.photo.attached?%>
+    </div>
     </div>
     <div class="right">
       <div class="booked-dates">

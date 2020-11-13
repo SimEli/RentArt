@@ -12,3 +12,18 @@
   height: 50px;
   border-radius: 50%;
 }
+
+  .nav_buttons {
+    width: 2000px;
+    #nav_list {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    a {
+      text-decoration: none;
+      color: #495057;
+      font-size: 20px;
+      list-style-type: none;
+    }
+  }
