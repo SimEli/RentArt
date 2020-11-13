@@ -13,12 +13,12 @@ puts "Creating artworks..."
 Artwork.destroy_all
 
 madonne = {
-  artist: "Leonarde Da Vinci",
+  artist: "Leonardo Da Vinci",
   name: "Madonne",
   description: "The madonne, virgin with her child",
   date: 1501,
-  size: "100cm x 100cm",
-  city: "St-Petersburg",
+  size: "100cm x 130cm",
+  city: "St. Petersburg",
   category: "painting",
   price: "€250",
 }

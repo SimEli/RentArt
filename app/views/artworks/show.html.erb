@@ -1,14 +1,26 @@
-<h2><%= @artwork.name %></h2>
-<p><%= @artwork.description %></p>
-<p><%= @artwork.category %></p>
-<%= cl_image_tag @artwork.photo.key, height: 400, width: 300, crop: :fill if @artwork.photo.attached?%>
-
-<h4>Artwork bookings</h4>
-<ol>
-  <% @artwork.bookings.each do |booking| %>
-    <li> <%= booking.start %> <%= booking.end %></li>
-  <% end %>
-</ol>
-<%= link_to "Book", new_artwork_booking_path(@artwork) %>
-<%= link_to "Back to artworks", artworks_path %>
-<%= link_to "Edit", edit_artwork_path %>
+<div class="container">
+  <div class="elements">
+    <div id="image">
+      <%= cl_image_tag @artwork.photo.key, height: 400, width: 300, crop: :fill if @artwork.photo.attached?%>
+    </div>
+    <div id="text">
+      <h2><%= @artwork.artist %></h2>
+      <h4><%= @artwork.name %></h4>
+      <h5><%= @artwork.description %></h5>
+      <p><%= @artwork.date %></p>
+      <p><%= @artwork.size %></p>
+      <p><%= @artwork.city %></p>
+      <p><%= @artwork.category %></p>
+      <p><%= @artwork.price %>/day</p>
+    </div>
+  </div>
+  <h4>Artwork bookings</h4>
+  <ol>
+    <% @artwork.bookings.each do |booking| %>
+      <li> <%= booking.start %> <%= booking.end %></li>
+    <% end %>
+  </ol>
+  <%= link_to "Book", new_artwork_booking_path(@artwork) %>
+  <%= link_to "Back to artworks", artworks_path %>
+  <%= link_to "Edit", edit_artwork_path %>
+</div>
