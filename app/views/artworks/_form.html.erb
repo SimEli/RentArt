@@ -37,6 +37,11 @@
           <%= f.text_field :category %>
         </div>
       </div>
+      <div id="price">
+        <%= f.label :price %>
+        <div id="input">
+          <%= f.text_field :price %>
+        </div>
         <%= f.input :photo, as: :file %>
       <%= f.submit %>
     <% end %>
