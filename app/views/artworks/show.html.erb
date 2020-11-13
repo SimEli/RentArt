@@ -1,20 +1,22 @@
 <div class="container">
   <div class="elements">
-    <div id="image">
-      <%= cl_image_tag @artwork.photo.key, height: 400, width: 300, crop: :fill if @artwork.photo.attached?%>
-    </div>
-    <div id="text">
-      <h2><%= @artwork.artist %></h2>
-      <h4><%= @artwork.name %></h4>
-      <h5><%= @artwork.description %></h5>
-      <p><%= @artwork.date %></p>
-      <p><%= @artwork.size %></p>
-      <p><%= @artwork.city %></p>
-      <p><%= @artwork.category %></p>
-      <p><%= @artwork.price %>/day</p>
+    <div class="text_image">
+      <div id="image">
+        <%= cl_image_tag @artwork.photo.key, height: 400, width: 300, crop: :fill if @artwork.photo.attached?%>
+      </div>
+      <div id="text">
+        <h2><%= @artwork.artist %></h2>
+        <h4><%= @artwork.name %></h4>
+        <h5><%= @artwork.description %></h5>
+        <p><%= @artwork.date %></p>
+        <p><%= @artwork.size %></p>
+        <p><%= @artwork.city %></p>
+        <p><%= @artwork.category %></p>
+        <p><%= @artwork.price %>/day</p>
+      </div>
     </div>
     <div id="map"
-      style="width: 50%; height: 400px;"
+      style="width: 45%; height: 400px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
@@ -28,10 +30,12 @@
   <%# <%= link_to "Book", new_artwork_booking_path(@artwork), class: 'buttons' %>
   <%# <%= link_to "Back to artworks", artworks_path %>
   <%# <%= link_to "Edit", edit_artwork_path %>
-  <div class="buttons">
-      <div id="booknow"><%= link_to "Book", new_artwork_booking_path(@artwork) %></div>
-      <div id="backindex"><%= link_to "Back to artworks", artworks_path %></div>
-      <div id="editbtn"><%= link_to "Edit", edit_artwork_path %></div>
+  <div class="links-to">
+    <div class="buttons">
+        <div id="booknow"><%= link_to "Book", new_artwork_booking_path(@artwork) %></div>
+        <div id="backindex"><%= link_to "Back to artworks", artworks_path %></div>
+        <div id="editbtn"><%= link_to "Edit", edit_artwork_path %></div>
+    </div>
   </div>
 </div>
 
