@@ -104,7 +104,7 @@ artwork.save
 
 dali = {
   artist: "Salvador Dali",
-  name: "Candlesticks, Castor & Pollux",
+  name: "Candlesticks",
   description: "Castor & Pollux (pair)",
   date: 1975,
   size: "26,5 cm",
