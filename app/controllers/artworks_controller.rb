@@ -5,8 +5,14 @@ class ArtworksController < ApplicationController
   end
 
   def show
-    # @artwork = Artwork.find(params[:id])
+     @artwork = Artwork.find(params[:id])
     # @artwork = Artwork.new
+    @markers = [
+      {
+        lat: @artwork.latitude,
+        lng: @artwork.longitude
+      }
+    ]
   end
 
   def new

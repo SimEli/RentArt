@@ -13,6 +13,11 @@
       <p><%= @artwork.category %></p>
       <p><%= @artwork.price %>/day</p>
     </div>
+    <div id="map"
+      style="width: 50%; height: 400px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
   <h4>Artwork bookings</h4>
   <ol>
@@ -24,3 +29,9 @@
   <%= link_to "Back to artworks", artworks_path %>
   <%= link_to "Edit", edit_artwork_path %>
 </div>
+
+
+<div id="map"
+     style="width: 50%; height: 400px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
