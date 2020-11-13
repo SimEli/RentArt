@@ -17,8 +17,8 @@ madonne = {
   name: "Madonne",
   description: "The madonne, virgin with her child",
   date: 1501,
-  size: "100cm x 100cm",
-  city: "St-Petersburg",
+  size: "100cm x 130cm",
+  city: "St. Petersburg",
   category: "painting",
   price: "€250",
 }
